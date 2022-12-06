@@ -1,4 +1,7 @@
 package com.example.server.model;
 
-public class ERole {
+public enum ERole {
+    ROLE_USER,
+    ROLE_ADMIN,
+    ROLE_MODERATOR
 }
