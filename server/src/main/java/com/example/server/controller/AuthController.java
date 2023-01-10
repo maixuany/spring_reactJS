@@ -76,7 +76,7 @@ public class AuthController {
         }
         String hashedPassword = passwordEncoder.encode(signUpRequest.getPassword());
         Set<Role> roles = new HashSet<>();
-        Optional<Role> userRole = roleRepository.findByName(ERole.ROLE_MODERATOR);
+        Optional<Role> userRole = roleRepository.findByName(ERole.ROLE_USER);
         if (userRole.isEmpty()) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("role not found");
         }
